@@ -43,5 +43,10 @@ namespace practica071021
                 MetroFramework.MetroMessageBox.Show(this, Ex.Message,"error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void fmtest_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

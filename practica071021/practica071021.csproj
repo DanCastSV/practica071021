@@ -98,6 +98,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumnos.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="CRUD.cs" />
     <Compile Include="fmtest.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -35,26 +35,32 @@ namespace practica071021
             if (action == "new")
             {
                 string query = "INSERT INTO alumnos(IdStudent, NameStudent, LastNameStudent, AgeStudent, SesionStudent, StudentSchoolYear  )" +
-                    "VALUES ('" + IdStudent + "', '" + NameStudent + "', '" + LastNameStudent + "', '" + AgeStudent + "', '"+ SesionStudent+"', '"+StudentSchoolYear+"')";
+                    "VALUES ('" + IdStudent + "', '" + NameStudent + "', '" + LastNameStudent + "', '" + AgeStudent + "', '" + SesionStudent + "', '" + StudentSchoolYear + "')";
                 crud.executeQuery(query); //llamato al metodo executeQuery de la clase Crud
                 return true;
             }
             else if (action == "edit")
             {
-                string query = "UPDATE alumno SET "
-                    + "bookId='" + IdStudent+ "'"
+                string query = "UPDATE alumnos SET "
                     + "NameStudent='" + NameStudent + "' ,"
                     + "LastNameStudent='" + LastNameStudent + "',"
                     + "AgeStudent='" + AgeStudent + "',"
                     + "SesionStudent='" + SesionStudent + "'"
-                    + "StudentSchoolYear='" + StudentSchoolYear + "'";
-                 
-                    
+                    + "StudentSchoolYear='" + StudentSchoolYear + "'"
+                    + "WHERE"
+                    + "IdStudent='" + IdStudent + "'";
+
                 crud.executeQuery(query);
                 return true;
             }
 
             return false;
+        }
+        public Boolean deleteStudent()
+        {
+            string query = "DELETE FROM alumnos WHERE IdStudent='" + IdStudent + "'";
+            crud.executeQuery(query);
+            return true;
         }
 
     }

@@ -46,6 +46,8 @@ namespace practica071021
             this.btnSave = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnExit = new MetroFramework.Controls.MetroButton();
+            this.btnEdit = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -247,15 +249,15 @@ namespace practica071021
             // 
             this.cbYearStudent.FormattingEnabled = true;
             this.cbYearStudent.Items.AddRange(new object[] {
-            "Primer Grado",
-            "Segundo Grado",
-            "Tercer Grado",
-            "Cuarto Grado",
-            "Quinto Grado ",
-            "Sexto Grado",
-            "Septimo Grado ",
-            "Octavo Grado ",
-            "Noveno Grado "});
+            "Primer ",
+            "Segundo ",
+            "Tercer ",
+            "Cuarto ",
+            "Quinto ",
+            "Sexto ",
+            "Septimo ",
+            "Octavo ",
+            "Noveno "});
             this.cbYearStudent.Location = new System.Drawing.Point(420, 112);
             this.cbYearStudent.Name = "cbYearStudent";
             this.cbYearStudent.Size = new System.Drawing.Size(121, 24);
@@ -265,9 +267,9 @@ namespace practica071021
             // 
             this.cbSesionStudent.FormattingEnabled = true;
             this.cbSesionStudent.Items.AddRange(new object[] {
-            "\"A\"",
-            "\"B\"",
-            "\"C\""});
+            "A",
+            "B",
+            "C"});
             this.cbSesionStudent.Location = new System.Drawing.Point(420, 153);
             this.cbSesionStudent.Name = "cbSesionStudent";
             this.cbSesionStudent.Size = new System.Drawing.Size(121, 24);
@@ -285,7 +287,7 @@ namespace practica071021
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(156, 215);
+            this.btnCancel.Location = new System.Drawing.Point(281, 215);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 44);
             this.btnCancel.TabIndex = 15;
@@ -303,9 +305,31 @@ namespace practica071021
             this.btnExit.UseSelectable = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(153, 215);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(115, 44);
+            this.btnEdit.TabIndex = 17;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.UseSelectable = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(409, 215);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 44);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseSelectable = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmAlumno
             // 
             this.ClientSize = new System.Drawing.Size(846, 465);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -368,5 +392,7 @@ namespace practica071021
         private MetroFramework.Controls.MetroButton btnSave;
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroButton btnExit;
+        private MetroFramework.Controls.MetroButton btnEdit;
+        private MetroFramework.Controls.MetroButton btnDelete;
     }
 }

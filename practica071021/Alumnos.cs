@@ -20,7 +20,7 @@ namespace practica071021
         //instancias a la clase Crud
         private CRUD crud = new CRUD();
 
-        //metodo para retornar los registros de la tabla Book
+        //metodo para retornar los registros de la tabla de estudiantes
         public MySqlDataReader getAllStudents()
         {
             string query = "SELECT IdStudent,NameStudent,LastNameStudent,AgeStudent,SesionStudent,StudentSchoolYear FROM alumnos";
